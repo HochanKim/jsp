@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
+</head> 
 <body>
 	<% %> <!-- 스크립틀릿 : 자바의 문법적 요소를 처리하는 부분 -->
 	<%= %> <!-- 표현식 -->

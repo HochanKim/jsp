@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	<%
 		if(request.getParameter("userId").equals("test") && request.getParameter("userPwd").equals("1234")) {
 			out.println("로그인 성공!");

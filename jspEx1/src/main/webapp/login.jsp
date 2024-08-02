@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	<form action="login_result.jsp" method="get">
 		<div>
 			아이디 : <input type="text" name="userId">

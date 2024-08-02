@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Insert title here</title> 
 </head>
 <body>
 	예상치 못한 에러가 발생했습니다.<br>

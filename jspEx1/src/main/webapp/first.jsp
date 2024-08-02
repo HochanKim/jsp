@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>첫 번째</title>
 </head>
-<body>
+<body> 
 	<%= new java.util.Date() %>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+	<% 
 		String text = null;
 		out.println(text.toString());
 	%>

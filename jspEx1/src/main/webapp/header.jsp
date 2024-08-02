@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	이것은 헤더를 담은 파일이다
 </body>
 </html>

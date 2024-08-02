@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	<%@ page import = "java.util.Date" %>
 	시간 : <%= new Date() %>
 </body>

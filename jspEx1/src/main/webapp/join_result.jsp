@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+	<% 
 		String id = request.getParameter("userId");
 		out.println(id + "님 환영합니다!");
 	%>
