@@ -33,7 +33,7 @@
 	
 			while (rs.next()) {
 				out.println("<tr>");
-				out.println("<td>" + "<input type='radio' name='student' value='stu_no'>" + "</td>");
+				out.println("<td><input type='radio' name='student' value='stu_no'></td>");
 				out.println("<td>"+ rs.getString("stu_name") +"</td>");
 				out.println("<td>"+ rs.getString("stu_no")+ "</td>");
 				out.println("</tr>");
