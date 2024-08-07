@@ -24,29 +24,17 @@
 
 </head>
 <body>
-<form action="board-view.jsp" method="post">
+<form action="board-update-result.jsp">
 	<%@include file="db2.jsp"%>	
 	<%
 		ResultSet rs = null;
-		PreparedStatement pstmt = null;
+		Statement stmt = null;
 		String boardNo = request.getParameter("boardNo");
-		String newTitle = request.getParameter("title");
-		String newContents = request.getParameter("contents"); 
-		/* String boardNo = (String)session.getAttribute("boardNo");
-		String newTitle = (String)session.getAttribute("title");
-		String newContents = (String)session.getAttribute("contents"); */
 		
 		try {
-			String querytext = "SELECT * FROM TBL_BOARD WHERE boardNo=? and title=? and contents=?";
-			pstmt = conn.prepareStatement(querytext);
-			
-			pstmt.setString(1, boardNo);
-			pstmt.setString(2, newTitle);
-			pstmt.setString(3, newContents);
-			
-			rs = pstmt.executeQuery();
-			
-			
+			stmt = conn.createStatement();
+			String querytext = "SELECT * FROM TBL_BOARD WHERE BOARDNO = " + boardNo;
+			rs = stmt.executeQuery(querytext);
 			
 			if(rs.next()){
 	%>	
@@ -57,6 +45,7 @@
 				<div>내용 : 
 					<textarea cols="50" rows="10" name="contents"><%= rs.getString("contents") %></textarea>
 				</div>
+				<hr>
 				<button type="submit">저장</button>
 	<%			
 			} else {
@@ -64,7 +53,7 @@
 			}
 			
 		} catch(SQLException ex) {
-			out.println("SQLException : " + ex.getMessage() + " System.out.println("+newTitle+") " + " System.out.println("+newContents+")");
+			out.println("SQLException : " + ex.getMessage());
 		}
 	%>
 </form>

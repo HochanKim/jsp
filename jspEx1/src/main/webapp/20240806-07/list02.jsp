@@ -19,14 +19,18 @@
 
 </head>
 <body>
+	<div>
+		<button onclick="location.href='NewLogin.jsp'">로그아웃</button>
+	</div>
 	<%@include file="db2.jsp"%>	
 	<%
 	ResultSet rs = null;
 	Statement stmt = null;
+	System.out.println(session.getAttribute("userID"));
 	
 	try{
 		stmt = conn.createStatement();
-		String querytext = "SELECT * FROM TBL_BOARD";
+		String querytext =  "SELECT * FROM tbl_board b INNER JOIN tbl_user u ON b.userId = u.userId";
 		rs = stmt.executeQuery(querytext);
 	%>
 		<table>
@@ -41,15 +45,23 @@
 		while (rs.next()) {
 	%>
 			<tr>
-				<td> <%= rs.getString("boardNo") %></td>
-				<td>
-					<a href='#' onclick="fnClick('<%= rs.getString("boardNo") %>')">	<!-- 함수 파라미터에 값 넣기(테이블의 해당 pk값)  -->
-						<%= rs.getString("title") %>
+				<td> <!-- 번호 -->
+					<%= rs.getString("b.boardNo") %>
+				</td>
+				<td> <!-- 제목 -->
+					<a href='#' onclick="fnClick('<%= rs.getString("b.boardNo") %>')">	<!-- 함수 파라미터에 값 넣기(테이블의 해당 pk값)  -->
+						<%= rs.getString("b.title") %>
 					</a>
 				</td>
-				<td> <%= rs.getString("userId") %></td>
-				<td> <%= rs.getString("cnt") %></td>
-				<td> <%= rs.getString("cdatetime") %></td>
+				<td> <!-- 작성자 -->
+					<%= rs.getString("u.name") %>
+				</td>
+				<td> <!-- 조회수 -->
+					<%= rs.getString("b.cnt") %>
+				</td>
+				<td> <!-- 작성일 -->
+					<%= rs.getString("b.cdatetime") %>
+				</td>
 			</tr>
 	<%
 		}
@@ -68,6 +80,5 @@
 <script>
 	function fnClick(boardNo){
 		location.href="board-view.jsp?boardNo=" + boardNo;
-		
 	}
 </script>

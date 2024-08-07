@@ -11,11 +11,15 @@
 
 <style>
 	table, th,  tr,  td{
-	 border : 1px solid black ;
-	 border-collapse: collapse;
-	 padding: 10px;
+		 border : 1px solid black ;
+		 border-collapse: collapse;
+		 padding: 10px;
 	}
-
+	.comment {
+		width : 200px;
+		height: 20px;
+		margin-left: 20px;
+	}
 }
 	
 </style>
@@ -45,10 +49,23 @@
 				</div>	
 				<div>내용 : 
 					<textarea cols="50", rows="10" readonly><%= rs.getString("contents") %></textarea>
-				</div>	
-				<button type="submit">삭제</button>
-				<button type="button" onclick="fnNew('<%= rs.getString("boardNo") %>')">수정</button>
-	<% 			
+				</div>
+				<hr>
+				<span>댓글 <input class="comment" type="text" placeholder="댓글쓰셈" id="comment"></span>
+				<button class="register" onclick="fnComment(#comment.value)">등록</button>
+				<hr>
+	<%
+		String sessionId = (String) session.getAttribute("userId");
+		String sessionStatus = (String) session.getAttribute("status");
+		
+		if(rs.getString("userId").equals(sessionId) || sessionStatus.equals("A")){
+	%>		
+			<button type="submit">삭제</button>
+			<button type="button" onclick="fnNew('<%= rs.getString("boardNo") %>')">수정</button>
+	<% 
+		}
+	%>
+	<% 		
 			} else {
 				out.println("삭제된 게시글입니다.");
 			}
@@ -69,5 +86,9 @@ function fnNew(boardNo){
 	form.submit();
 	
 	*/
+}
+
+function fnComment(comment){
+	location.href="comment.jsp?commentNo=&boardNo="+ boardNo +"&userId="+ userId +"&comment="+ comment;
 }
 </script>

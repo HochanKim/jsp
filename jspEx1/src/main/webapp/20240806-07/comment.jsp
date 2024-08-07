@@ -1,7 +1,7 @@
 <%@page import="java.awt.Checkbox"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+    
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
@@ -15,46 +15,31 @@
 	 border-collapse: collapse;
 	 padding: 10px;
 	}
-	div {
-		margin-top : 5px;
-	}
+
 }
 	
 </style>
 
 </head>
 <body>
-<form action="board-update-result.jsp">
 	<%@include file="db2.jsp"%>	
 	<%
 		ResultSet rs = null;
 		Statement stmt = null;
+		String cmntNo = request.getParameter("commentNo + 1");
 		String boardNo = request.getParameter("boardNo");
+		String userId = request.getParameter("userId");
+		String cmnt = request.getParameter("comment");
 		
-		try {
+		try{
 			stmt = conn.createStatement();
-			String querytext = "SELECT * FROM TBL_BOARD WHERE BOARDNO = " + boardNo;
-			rs = stmt.executeQuery(querytext);
-			
-			if(rs.next()){
-	%>	
-				<input  type="hidden" 
-						value="<%= rs.getString("boardNo") %>" 
-						name="boardNo"> 
-				<div>제목 : <input value="<%= rs.getString("title") %>" name="title"></div>
-				<div>내용 : 
-					<textarea cols="50" rows="10" name="contents"><%= rs.getString("contents") %></textarea>
-				</div>
-				<button type="submit">저장</button>
-	<%			
-			} else {
-				out.println("삭제된 게시글 입니다.");
-			}
-			
+			String querytext = "INSERT INTO tbl_comment VALUES ('"+ cmntNo +"', '"+ boardNo +"', '"+ userId +"', '"+ cmnt +")";
+			stmt.executeUpdate(querytext);
+		
 		} catch(SQLException ex) {
 			out.println("SQLException : " + ex.getMessage());
 		}
 	%>
-</form>
+
 </body>
 </html>

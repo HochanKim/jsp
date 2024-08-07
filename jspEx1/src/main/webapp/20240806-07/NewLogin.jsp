@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		/* session.removeAttribute("userId"); */	// 세션 개별삭제 메소드
+		session.invalidate();						// 세션 일괄삭제 메소드
+	%>
 	<form action="login-result.jsp">	<!-- 'login_result.jsp'로 정보를 넘기기  -->
 		<div>
 			<label>아이디 : <input type="text" name="id"></label>

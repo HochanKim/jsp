@@ -30,8 +30,8 @@
 		
 		try{
 			stmt = conn.createStatement();
-			String querytext = "SELECT * FROM TBL_BOARD";
-			rs = stmt.executeQuery(querytext);
+			String querytext = "DELETE FROM tbl_board WHERE boardNo = "+ boardNo;
+			stmt.executeUpdate(querytext);
 		
 		} catch(SQLException ex) {
 			out.println("SQLException : " + ex.getMessage());
@@ -40,3 +40,7 @@
 
 </body>
 </html>
+<script>
+	alert("삭제되었다.");
+	location.href = "list02.jsp";
+</script>
