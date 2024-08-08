@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 
 <style>
-	table, th,  tr,  td{
+	table, th,  tr,  td {
 	 border : 1px solid black ;
 	 border-collapse: collapse;
 	 padding: 10px;
@@ -27,10 +27,15 @@
 		ResultSet rs = null;
 		Statement stmt = null;
 		String boardNo = request.getParameter("boardNo");
-		
-		try{
+		String comment = request.getParameter("comment");
+		String sessionId = (String) session.getAttribute("userId");
+		try {
 			stmt = conn.createStatement();
-			String querytext = "DELETE FROM tbl_board WHERE boardNo = "+ boardNo;
+			String querytext = 
+					"INSERT INTO TBL_COMMENT VALUES ("
+					+ "NULL, " + boardNo + ",'" + sessionId + "', '" + comment + "', "
+					+ "0, now(), now()"
+					+ ")";
 			stmt.executeUpdate(querytext);
 		
 		} catch(SQLException ex) {
@@ -41,6 +46,8 @@
 </body>
 </html>
 <script>
-	alert("삭제되었다.");
-	location.href = "list02.jsp";
+ 	alert("저장되었습니다.");
+	window.close();
+	window.opener.fnReload();
 </script>
+​

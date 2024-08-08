@@ -14,6 +14,7 @@
 		String db_url = "jdbc:mysql://localhost:3306/sample";
 		String db_id = "root";
 		String db_pw = "test1234";
+		// DB를 연결한 주체 conn
 		conn = DriverManager.getConnection(db_url, db_id, db_pw);
 		System.out.println("DB 연결 완료");
 	%>

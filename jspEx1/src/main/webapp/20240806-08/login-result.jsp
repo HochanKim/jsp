@@ -92,7 +92,7 @@
 		}
 	%>
 	<div>
-		<button onclick="location.href='NewLogin.jsp'">로그인 페이지로 이동</button>
+		<button onclick="location.href='login.jsp'">로그인 페이지로 이동</button>
 	</div>
 </body>
 </html>
