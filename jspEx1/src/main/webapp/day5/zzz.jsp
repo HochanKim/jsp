@@ -6,9 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body> 
-<jsp:include page="header.jsp"></jsp:include>
-	<%@ page import = "java.util.Date" %>
-	시간 : <%= new Date() %>
+<body>
+ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+${name}	<!-- controller 클래스에서 요청한 파라미터를 받아서 호출 -->
 </body>
 </html>

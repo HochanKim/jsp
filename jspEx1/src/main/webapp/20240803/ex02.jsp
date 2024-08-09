@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head> 
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 	<%!
 	// 선언문
 		int i = 0;

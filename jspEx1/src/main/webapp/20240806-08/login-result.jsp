@@ -30,7 +30,7 @@
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		
-		try{
+		try {
 			stmt = conn.createStatement();
 			String querytext = 
 					"SELECT * FROM TBL_USER "

@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body> 
-	이것은 헤더를 담은 파일이다
+	<div> 검색어 : <input type="text" placeholder="검색창"></div>
 </body>
 </html>

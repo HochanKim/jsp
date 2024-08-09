@@ -21,6 +21,7 @@
 			stmt = conn.createStatement();
 			String query = "INSERT INTO TBL_BOARD VALUES" + "(" + "null, '" + title + "', '" + contents + "', 0, '"+ userId +"', 'number', now(), now()" + ")";
 			stmt.executeUpdate(query);
+			System.out.println(query);
 			System.out.println("쿼리문 : " + query);
 			response.sendRedirect("tbl_list.jsp");
 			
