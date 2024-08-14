@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,12 +13,12 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <!-- 헤더 영역 -->
+    <!-- í¤ë ìì­ -->
     <header>
         <div class="wrap">
             <div class="logo-img">
                 <a href="javascript::">
-                    <img src="image/logo_colorchange.png" rel="로고">
+                    <img src="image/logo_colorchange.png" rel="ë¡ê³ ">
                 </a>
             </div>
             <div class="hmw-menu-btn">
@@ -26,7 +29,7 @@
         </div>
     </header>
 
-    <!-- 서브메뉴 영역 -->
+    <!-- ìë¸ë©ë´ ìì­ -->
     <nav class="sub-menu">
         <ul>
             <li><a href="#">about us</a></li>
@@ -44,7 +47,7 @@
             <div class="behind">
                 <p>070-7700-9308</p>
                 <p>halfmediaworks@naver.com</p>       
-                <p>경기도 시흥시 서울대학로264번길35 4층 425호</p>
+                <p>ê²½ê¸°ë ìí¥ì ìì¸ëíë¡264ë²ê¸¸35 4ì¸µ 425í¸</p>
             </div>
         </address>
     </nav>

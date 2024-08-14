@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,10 +10,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <!-- 푸터 영역 -->
+    <!-- í¸í° ìì­ -->
     <footer>
         <address class="wrap">
             <div class="fowd">

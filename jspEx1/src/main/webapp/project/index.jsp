@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -17,14 +20,12 @@
             <form name="contact" class="contact"></form>
         </div>
     </section>
-    <footer></footer>
+    <jsp:include page="footer.jsp"></jsp:include>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/halfmedia.js"></script>
     <script>
         $(document).ready(function() {
-            $("header").load("header.html");
-            $("footer").load("footer.html");
-            $(".contact").load("contact.jsp");
+        	$("header").load("header.jsp");
         });   
     </script>
 </body>
