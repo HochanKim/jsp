@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,6 +46,7 @@
 <script>
 	var check1 = false; // 아이디 중복체크 확인 여부
 	var check2 = false; // 중복 여부
+	
 	// 필수입력 메소드
     function fnInsert() {
         var form = document.user;
@@ -95,7 +97,7 @@
             return;
         }
 
-        form.action = "join-insult.jsp";
+        form.action = "join-insert.jsp";
         form.submit();
     }
 	
@@ -107,10 +109,21 @@
 		if(form.userId.value == "" || form.userId.value.length < 0){
 			alert("아이디를 먼저 입력해주세요")
 			form.userId.focus();
-		}else{
-			window.open("idCheck.jsp?userId="+form.userId.value, "check","width=500, height=300");
+		} else {
+			window.open("idCheck.jsp?userId="+form.userId.value, "check", "width=500, height=300");
 		}
 	}
+	function nickCheck(){
+		check1 = true;
+		var form = document.user;
+		if(form.nickName.value == "" || form.nickName.value.length < 0){
+			alert("닉네임을 먼저 입력해주세요")
+			form.nickName.focus();
+		} else {
+			window.open("nickCheck.jsp?nickName="+form.nickName.value, "check", "width=500, height=300");
+		}
+	}
+	
 	// 중복체크 리턴 결과
 	function getReturn(val){
 		if(val == "Y"){

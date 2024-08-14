@@ -28,5 +28,9 @@
 		out.println("SQLException : " + ex.getMessage());
 	}
 %>
+<script>
+	alert("제안서 제출했습니다.");
+	location.href = "contact.jsp";
+</script>
 </body>
 </html>

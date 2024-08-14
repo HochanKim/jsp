@@ -8,7 +8,8 @@
 </head>
 <body>
 <%@ include file="db.jsp" %>
-<%
+<form name="check">
+	<%
 	ResultSet rs = null;
 	Statement stmt = null;
 	String userId = request.getParameter("userId");
@@ -22,12 +23,12 @@
 		if(rs.next()){
 			out.println("이미 존재하는 아이디입니다. 다른 아이디를 입력해주세요.");
 		%>
-			<input name="flg" value="N" hidden>
+			<input name="flag" value="N" hidden>
 		<% 
 		} else {
 			out.println("사용 가능한 아이디입니다.");
 		%>
-			<input name="flg" value="Y" hidden>
+			<input name="flag" value="Y" hidden>
 		<%
 		}
 		
@@ -35,12 +36,13 @@
 		out.println("SQLException : " + ex.getMessage());
 	}
 %>
+</form>
 <input type="button" onclick="back()" value="되돌아가기">
 </body>
 </html>
 <script>
 	function back(){
-		window.opener.getReturn(document.check.flg.value);
+		window.opener.getReturn(document.check.flag.value);
 		window.close();
 	}
 </script>

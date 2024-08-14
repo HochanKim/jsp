@@ -43,6 +43,7 @@
 				rs = stmt.executeQuery(sqlId);
 				
 				if(rs.next()){
+					/* 아이디, 비밀번호가 모두 데이터에 존재 */
 					// 아이디는 존재하지만 비밀번호가 틀릴 경우
 					if(rs.getInt("count") >= 5){
 						// 비밀번호 불일치 5번 이상일 경우
