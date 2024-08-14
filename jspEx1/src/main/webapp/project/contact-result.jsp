@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@include file="db.jsp"%>
+<%@ include file="db.jsp" %>
 <%
 	String name = request.getParameter("name");
 	String phone = request.getParameter("phone");
