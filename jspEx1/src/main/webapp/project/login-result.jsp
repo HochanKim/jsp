@@ -25,7 +25,8 @@
 			/* 아이디, 비밀번호 일치 여부 */
 			if(rs.next()) {
 				// 아이디, 비밀번호 모두 정상적인 로그인
-				out.println("정상적인 로그인");
+				out.println("<script>alert('성공적으로 로그인 하였습니다.');");
+				out.println("window.close(); </script>");
 				if(rs.getInt("count") >= 5){
 					// 비밀번호 불일치 5번 이상일 경우
 					out.println("<script>alert('로그인 시도 회수를 초과했습니다.');");
@@ -34,12 +35,12 @@
 				} else {
 					// 로그인 성공, 세션 저장
 					session.setAttribute("userId", rs.getString("userId"));
+					session.setAttribute("userPwd", rs.getString("pwd"));
 					session.setAttribute("staffYN", rs.getString("staffYN"));
-					/* response.sendRedirect(); */
+					session.setMaxInactiveInterval(600); 	// 10분간 아이디 유지
 				}
 				
 			} else {
-				
 				String sqlId = "SELECT * FROM hmw_user WHERE userId = '"+ userId +"'";
 				rs = stmt.executeQuery(sqlId);
 				

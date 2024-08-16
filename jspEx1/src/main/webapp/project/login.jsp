@@ -18,16 +18,18 @@
 		<div>
 			<label>패스워드 : <input type="password" name="pwd"></label>
 		</div>
-		<input type="button" onclick="fnLogin()" value="로그인!">
+		<input type="button" onclick="fnLogin()" value="로그인!">		<!-- 정상 로그인을 하면 창이 닫히고 'index.jsp'로 전환 -->
 		<input type="button" onclick="fnJoin()" value="회원가입!">		<!-- 'join.jsp'로 이동 -->
 	</form>
 </body>
 </html>
 <script>
+	// 회원가입 버튼 클릭
     function fnJoin() {
         location.href = "join.jsp";
     }
     
+	// 로그인 버튼 클릭
     function fnLogin() {
         var form = document.login;
         

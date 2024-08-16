@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/index.css">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
@@ -35,34 +36,30 @@
                 <div>
                     <label>
                         <p>상세내용</p> 
-                        <textarea cols="100" rows="20" name="q_text"></textarea>
+                        <textarea cols="80" rows="15" name="q_text" class="q_text"></textarea>
                     </label>
                 </div>
                 <div>
-                    <label>
-                        <p>제작방식</p>  
-                        <input type="radio" name="classification" value="picture">사진촬영
-                        <input type="radio" name="classification" value="allround">영상제작(종합)
-                        <input type="radio" name="classification" value="shot">영상촬영
-                        <input type="radio" name="classification" value="planning">영상기획
-                        <input type="radio" name="classification" value="edit">영상편집
-                        <input type="radio" name="classification" value="droneshot">드론촬영
-                    </label>
+                    <p>제작방식</p>  
+                    <label><input class="radio" type="radio" name="classification" value="picture">사진촬영</label>
+                    <label><input class="radio" type="radio" name="classification" value="allround">영상제작(종합)</label>
+                    <label><input class="radio" type="radio" name="classification" value="shot">영상촬영</label>
+                    <label><input class="radio" type="radio" name="classification" value="planning">영상기획</label>
+                    <label><input class="radio" type="radio" name="classification" value="edit">영상편집</label>
+                    <label><input class="radio" type="radio" name="classification" value="droneshot">드론촬영</label>
                 </div>
                 <div>
-                    <label>
-                        <p>제작목적</p>
-                        <input type="radio" name="purpose" value="pr">제품/회사 홍보
-                        <input type="radio" name="purpose" value="mv">뮤직비디오
-                        <input type="radio" name="purpose" value="recode">행사기록
-                        <input type="radio" name="purpose" value="conts">영화/예능 콘텐츠
-                        <input type="radio" name="purpose" value="viral">유튜브/SNS 바이럴
-                        <input type="radio" name="purpose" value="sky">항공샷
-                        <input type="radio" name="purpose" value="etc">기타
-                    </label>
+                    <p>제작목적</p>
+                    <label><input class="radio" type="radio" name="purpose" value="pr">제품/회사 홍보</label>
+                    <label><input class="radio" type="radio" name="purpose" value="mv">뮤직비디오</label>
+                    <label><input class="radio" type="radio" name="purpose" value="recode">행사기록</label>
+                    <label><input class="radio" type="radio" name="purpose" value="conts">영화/예능 콘텐츠</label>
+                    <label><input class="radio" type="radio" name="purpose" value="viral">유튜브/SNS 바이럴</label>
+                    <label><input class="radio" type="radio" name="purpose" value="sky">항공샷</label>
+                    <label><input class="radio" type="radio" name="purpose" value="etc">기타</label>
                 </div>
                 <div>
-                    <button type="button" onclick="fnContact()">제출하기</button>
+                    <button type="button" onclick="fnContact()" class="submit">제출하기</button>
                 </div>
             </form>
         </div>
@@ -101,6 +98,5 @@
 
         form.action = "contact-result.jsp";
 		form.submit();
-
     }
 </script>

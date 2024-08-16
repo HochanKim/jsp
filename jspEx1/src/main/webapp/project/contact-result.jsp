@@ -31,7 +31,7 @@
 %>
 <script>
 	alert("제안서 제출했습니다.");
-	location.href = "contact.jsp";
+	location.href = "index.jsp";
 </script>
 </body>
 </html>

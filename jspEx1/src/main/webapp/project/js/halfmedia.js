@@ -1,15 +1,3 @@
-// 서브메뉴
-var menu = document.querySelector(".hmw-menu-btn");
-var hide = document.querySelector(".sub-menu");
-$(menu).on("click", () => {
-    if(menu.classList.contains('open')){
-        menu.classList.remove('open');
-        $(hide).on("click").css("top", "-100vh");
-    } else{
-        menu.classList.add('open');
-        $(hide).on("click").css("top", "0");
-    };
-});
 
 // 제안서 제출
 function fnContact() {

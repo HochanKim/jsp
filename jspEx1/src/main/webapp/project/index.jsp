@@ -6,27 +6,25 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halfmedia Works</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/reset.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/common.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/index.css">
+    <!-- js 파일 include -->
+    <script type="text/javascript"><%@ include file = "/project/js/halfmedia.js" %></script>
+    <script type="text/javascript"><%@ include file = "/project/js/jquery-3.7.1.min.js" %></script>
 </head>
 <body>
     <header></header>
     <section class="video-sec">
         <video src="./image/Rogito-Freedumb_3.mp4" autoplay muted loop></video>
     </section>
-    <section class="contact-sec" id="cont">
-        <div class="wrap">
-            <form name="contact" class="contact"></form>
-        </div>
-    </section>
+    <section class="contact-sec" id="cont"></section>
     <jsp:include page="footer.jsp"></jsp:include>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/halfmedia.js"></script>
-    <script>
-        $(document).ready(function() {
-        	$("header").load("header.jsp");
-        });   
-    </script>
 </body>
 </html>
+<script>
+$(document).ready(function() {
+    $("header").load("header.jsp");
+    $("#cont").load("contact.jsp");
+});
+</script>
