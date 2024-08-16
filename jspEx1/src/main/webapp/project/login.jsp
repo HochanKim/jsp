@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/index.css">
 </head>
 <body>
 	<%
@@ -13,10 +14,16 @@
 	%>
 	<form name="login" class="login">	
 		<div>
-			<label>아이디 : <input type="text" name="id"></label>
+			<label>
+                <p>아이디</p>
+                <input type="text" name="id">
+            </label>
 		</div>
 		<div>
-			<label>패스워드 : <input type="password" name="pwd"></label>
+			<label>
+                <p>패스워드</p>
+                <input type="password" name="pwd">
+            </label>
 		</div>
 		<input type="button" onclick="fnLogin()" value="로그인!">		<!-- 정상 로그인을 하면 창이 닫히고 'index.jsp'로 전환 -->
 		<input type="button" onclick="fnJoin()" value="회원가입!">		<!-- 'join.jsp'로 이동 -->
