@@ -9,9 +9,6 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/index.css">
 </head>
 <body>
-	<%
-		session.invalidate();						// 세션 일괄삭제 메소드
-	%>
 	<form name="login" class="login">	
 		<div>
 			<label>
@@ -25,8 +22,8 @@
                 <input type="password" name="pwd">
             </label>
 		</div>
-		<input type="button" onclick="fnLogin()" value="로그인!">		<!-- 정상 로그인을 하면 창이 닫히고 'index.jsp'로 전환 -->
-		<input type="button" onclick="fnJoin()" value="회원가입!">		<!-- 'join.jsp'로 이동 -->
+		<input class="logbutton" type="button" onclick="fnLogin()" value="로그인!">		<!-- 정상 로그인을 하면 창이 닫히고 'index.jsp'로 전환 -->
+		<input class="logbutton" type="button" onclick="fnJoin()" value="회원가입!">		<!-- 'join.jsp'로 이동 -->
 	</form>
 </body>
 </html>
@@ -52,7 +49,7 @@
             return;
         }
 
-        form.action = "login-result.jsp"; // 'login-result.jsp'로 이동
+        form.action = "login-result.jsp"; // 입력한 아이디, 비밀번호는 'login-result.jsp'로 이동
         form.submit();	// 제출
     }	
 </script>

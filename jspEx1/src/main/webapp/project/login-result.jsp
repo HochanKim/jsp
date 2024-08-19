@@ -13,8 +13,10 @@
 	<%
 		ResultSet rs = null;
 		Statement stmt = null;
+		// id와 pwd 값을 전달 받음
 		String userId = request.getParameter("id");
 		String userPwd = request.getParameter("pwd");
+		
 		
 		try{
 			stmt = conn.createStatement();
@@ -25,19 +27,29 @@
 			/* 아이디, 비밀번호 일치 여부 */
 			if(rs.next()) {
 				// 아이디, 비밀번호 모두 정상적인 로그인
+				// 로그인 팝업창 얼럿
 				out.println("<script>alert('성공적으로 로그인 하였습니다.');");
-				out.println("window.close(); </script>");
+				// 팝업창 닫기
+				out.println("window.close();");
+				// 팝업 띄운 부모창(header.jsp, 객체 opener 사용) 새로고침 
+				out.println("opener.location.reload(true);</script>");
+				
+				
 				if(rs.getInt("count") >= 5){
 					// 비밀번호 불일치 5번 이상일 경우
 					out.println("<script>alert('로그인 시도 회수를 초과했습니다.');");
 					out.println("history.go(-1); </script>");
 					return;
+					
 				} else {
 					// 로그인 성공, 세션 저장
 					session.setAttribute("userId", rs.getString("userId"));
-					session.setAttribute("userPwd", rs.getString("pwd"));
 					session.setAttribute("staffYN", rs.getString("staffYN"));
-					session.setMaxInactiveInterval(600); 	// 10분간 아이디 유지
+					// 세션 유지 기간 설정, 초 단위
+					session.setMaxInactiveInterval(60); 	// 1분간 아이디 유지
+					// 로그인 실패 카운트 누적 초기화
+					sql = "UPDATE hmw_user SET count = '0' WHERE userId = '" + userId + "'";
+					stmt.executeUpdate(sql);
 				}
 				
 			} else {

@@ -20,11 +20,35 @@
                 </a>
             </div>
             <div class="float-right">
-            	<div class="login">
-            		<a href="javascript::">
-            			<span>로그인</span>
-            		</a>
-            	</div>
+            	<form name="session" class="session">
+            		<div class="login">
+		            	<%
+							if(session.getAttribute("userId") == null && session.getAttribute("staffYN") == null){
+								// 세션값이 존재하지 않을때
+						%>
+								<a href="javascript::">
+		            				<span class="log-in">로그인</span>
+		            			</a>
+								<a href="javascript::">
+		            				<span class="join">회원가입</span>
+		            			</a>
+						<%
+							} else {
+								// 세션값이 존재하는 경우
+								String userId = (String) session.getAttribute("userId");
+								String staff = (String) session.getAttribute("staffYN");
+						%>
+								<a href="javascript::">
+									<span class="logout">로그아웃</span>
+								</a>
+								<a href="javascript::">
+									<span class="memberinfo">회원정보</span>
+								</a>
+						<%
+							}
+						%>
+            		</div>
+            	</form>
             	<div class="hmw-menu-btn">
                 	<span class="line"></span>
                 	<span class="line"></span>
@@ -77,9 +101,30 @@
 		});
 		
 	// 로그인
-	var login = document.querySelector(".login");
-	$(login).on("click", () => {
-		window.open("login.jsp", "PopupWin", "width=600, height=600");
+	var logIn = document.querySelector(".log-in");
+	$(logIn).on("click", () => {
+		window.open("login.jsp", "PopupWin", "width=600, height=600, top=150, left=250");
+	});
+	
+	// 회원가입
+	var join = document.querySelector(".join");
+	$(join).on("click", () => {
+		window.open("join.jsp", "PopupWin", "width=700, height=800, top=100, left=250");
+	});
+	
+	// 로그아웃
+	var logOut = document.querySelector(".logout");
+	var form = document.session;
+	$(logOut).on("click", () => {
+		form.action = "logout.jsp"; 	// 'logout.jsp'로 전달하여 세션 종료
+        form.submit();					// 제출
+		alert("로그아웃하였습니다.");
+	});
+	
+	// 회원정보
+	var userInfo = document.querySelector(".memberinfo");
+	$(userInfo).on("click", () => {
+		location.href="memberinfo.jsp";
 	});
 	</script>
 </body>

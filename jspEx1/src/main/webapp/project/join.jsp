@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/index.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -37,9 +38,9 @@
 		</div>
 		<div>
 			<label>가입목적</label>
-            <textarea cols="100" rows="20" name="reason"></textarea>
+            <textarea cols="60" rows="15" name="reason"></textarea>
 		</div>
-		<button type="button" onclick="fnInsert()">가입하기</button>
+		<button type="button" onclick="fnInsert()" class="insert">가입하기</button>
 	</form>
 </body>
 </html>

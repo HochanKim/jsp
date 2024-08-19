@@ -26,7 +26,7 @@
 	%>
 			<script>
 				alert("가입이 완료되었습니다.");
-				location.href="join.jsp";
+				location.href="login.jsp";
 			</script>		
 	<%
 		} catch(SQLException ex) {
