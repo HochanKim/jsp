@@ -27,6 +27,7 @@
 
 </head>
 <body>
+<!-- 'list02.jsp'에서 이동 -->
 <form action="board-delete.jsp" name="board">
 	<%@include file="db2.jsp"%>	
 	<%

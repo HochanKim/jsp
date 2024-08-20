@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
+<!-- 'index.jsp'와 연동  -->
 <section class="contact-sec">
         <div class="wrap">
             <form name="contact" class="contact">

@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 'contact.jsp'에서 이동 -->
 <%@ include file="db.jsp" %>
 <%
 	String name = request.getParameter("name");

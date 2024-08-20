@@ -26,6 +26,7 @@
 
 </head>
 <body>
+<!-- 게시판 -->
 	<div><button onclick="location.href='login.jsp'">로그아웃</button></div>
 	<%@include file="db2.jsp"%>	
 	<%
@@ -88,11 +89,11 @@
 </html>
 
 <script>
-	function fnView(boardNo){	/* board-view.jsp로 이동 */
+	function fnView(boardNo){	/* 'board-view.jsp'로 이동 */
 		location.href="board-view.jsp?boardNo="+boardNo;
 	}
 	
-	function fnInfo(userId){	/* user-info.jsp로 이동 */
+	function fnInfo(userId){	/* 'user-info.jsp'로 이동 */
 		location.href="user-info.jsp?userId="+userId;
 	}
 	

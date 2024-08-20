@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/subpage.css">
 </head>
 <body>
+	<!-- 'header.jsp'에서 이동 -->
 	<%@include file="db.jsp"%>	
 	<%
 		ResultSet rs = null;

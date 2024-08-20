@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/common.css">
 </head>
 <body>
+<!-- 'index.jsp'와 연동  -->
     <!-- 헤더 영역 -->
     <header id="header">
         <div class="wrap">

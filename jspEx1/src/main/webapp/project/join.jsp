@@ -9,11 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 'header.jsp' or 'login.jsp'에서 이동 -->
 	<form name="user" class="new-join" method="post">	
 		<div>
 			<label>아이디</label>
             <input type="text" name="userId">
-			<button type="button" onclick="idCheck()">중복체크</button>
+			<button type="button" onclick="idCheck()">중복체크</button>	<!-- 클릭시 'idCheck.jsp'로 정보 전달 -->
 		</div>
 		<div>
 			<label>비밀번호</label>
@@ -26,7 +27,7 @@
         <div>
 			<label>닉네임</label>
             <input type="text" name="nickName">
-			<button type="button" onclick="nickCheck()">중복체크</button>
+			<button type="button" onclick="nickCheck()">중복체크</button>	<!-- 클릭시 'idCheck.jsp'로 정보 전달 -->
 		</div>
 		<div>
 			<label>이름</label>
@@ -40,7 +41,7 @@
 			<label>가입목적</label>
             <textarea cols="60" rows="15" name="reason"></textarea>
 		</div>
-		<button type="button" onclick="fnInsert()" class="insert">가입하기</button>
+		<button type="button" onclick="fnInsert()" class="insert">가입하기</button>	<!-- 클릭시 'join-insert.jsp'로 정보 전달 -->
 	</form>
 </body>
 </html>

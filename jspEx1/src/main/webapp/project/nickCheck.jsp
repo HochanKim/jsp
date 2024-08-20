@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 'join.jsp'의 '중복체크' 버튼의 기능구현 (회원 닉네임) -->
 <%@ include file="db.jsp" %>
 <form name="check">
 	<%

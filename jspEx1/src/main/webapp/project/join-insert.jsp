@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 'join.jsp'에서 전달받음 -->
 <%@ include file="db.jsp" %>
 	<%
 		Statement stmt = null;
@@ -25,6 +26,7 @@
 			stmt.executeUpdate(sql);
 	%>
 			<script>
+			// 모든 조건 충족시 쿼리에 정보를 전달하고 join.jsp에 얼럿창 띄우기
 				alert("가입이 완료되었습니다.");
 				location.href="login.jsp";
 			</script>		

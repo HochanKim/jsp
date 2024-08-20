@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 'header.jsp'에서 '로그아웃' 버튼 클릭시 세션 삭제 구현 -->
 <%
 		session.removeAttribute("userId");
 		session.removeAttribute("staffYN");

@@ -23,14 +23,14 @@
             </label>
 		</div>
 		<input class="logbutton" type="button" onclick="fnLogin()" value="로그인!">		<!-- 정상 로그인을 하면 창이 닫히고 'index.jsp'로 전환 -->
-		<input class="logbutton" type="button" onclick="fnJoin()" value="회원가입!">		<!-- 'join.jsp'로 이동 -->
+		<input class="logbutton" type="button" onclick="fnJoin()" value="회원가입!">
 	</form>
 </body>
 </html>
 <script>
 	// 회원가입 버튼 클릭
     function fnJoin() {
-        location.href = "join.jsp";
+        location.href = "join.jsp";		// 'join.jsp'로 이동
     }
     
 	// 로그인 버튼 클릭
