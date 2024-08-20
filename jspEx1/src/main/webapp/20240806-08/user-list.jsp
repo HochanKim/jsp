@@ -20,6 +20,7 @@
 </style>
 
 </head>
+<!-- 'login-result.jsp'에서 이동 -->
 <body>
 	<div>
 		<button onclick="location.href='list02.jsp'">게시판으로 이동</button>
