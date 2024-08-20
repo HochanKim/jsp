@@ -51,17 +51,23 @@
 	// 필수입력 메소드
     function fnInsert() {
         var form = document.user;
+        var regId =  /^[a-zA-Z0-9]*$/;	// 아이디 정규표현식(영문, 숫자만 허용)
+        // var password = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;	// 비밀번호 정규표현식 (영문, 숫자, 특수문자)
 
         // 아이디
         if(form.userId.value == ""){
             alert("아이디를 입력해주세요");
             form.userId.focus();
             return;
-        } else if(form.userId.value.length <= 7 || form.userId.value.length > 12){
-            alert("아이디는 최소 8글자 ~ 12글자 입니다.");
+        } else if(form.userId.value.length <= 5 || form.userId.value.length > 12){
+            alert("아이디는 최소 5글자 ~ 12글자 입니다");
             return;
         } else if(!check2){
         	alert("아이디 중복체크 해주세요");
+            return;
+        } else if(!regId.test(form.userId.value)){
+        	alert("아이디는 영문, 숫자로만 생성이 가능합니다");
+            form.userId.focus();
             return;
         }
         

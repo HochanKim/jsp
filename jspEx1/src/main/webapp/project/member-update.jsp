@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/reset.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/project/css/subpage.css">
 </head>
 <body>
 	<%@include file="db.jsp"%>	
@@ -56,10 +54,3 @@
 	%>
 </body>
 </html>
-<script>
-function fnUpdate(){
-	var form = document.member;
-	form.action = "member-update.jsp";
-	form.submit();
-}
-</script>

@@ -24,7 +24,7 @@
                 <div>
                     <label>
                         <p>연락처</p> 
-                        <input type="text" name="phone" placeholder="010-xxxx-xxxx or 02-xxxx-xxxx" class="input-text">
+                        <input type="text" name="phone" placeholder="010xxxxxxxx or 031-xxx-xxxx" class="input-text">
                     </label>
                 </div>
                 <div>
@@ -70,22 +70,36 @@
     function fnContact() {
         // js 변수 설정
         var form = document.contact;
+        var regPhone = /^(01[016789]|02|0[3-9]{1}[0-9]{1})[-]?\d{3,4}[-]?\d{4}$/; 	// 전화번호 정규표현식 (하이픈 선택적용)
+        var regEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 			// 이메일 정규표현식
 
-        // 필수입력 유도 (text)
+        // 필수입력 유도 (text)\
+        // 이름
         if(form.name.value == ""){
             alert("이름을 입력해주세요");
             form.name.focus();
             return;
         }
+        
+        // 전화번호
         if(form.phone.value == ""){
             alert("전화번호를 입력해주세요");
             form.phone.focus();
             return;
+        } else if(!regPhone.test(form.phone.value)) {
+        	alert("잘못된 전화번호를 입력했습니다. \n해외 거주자는 이메일 주소 혹은 상세내용란에 메신저, SNS 아이디를 남겨주세요");
+            form.phone.focus();
+            return;
         }
+        
+        // 이메일
         if(form.email.value == ""){
             alert("이메일을 입력해주세요");
             form.email.focus();
             return;
+        } else if(!regEmail.test(form.email.value)) { 	
+        	alert('형식에 맞지 않는 이메일입니다. 다시 입력해 주세요');     
+        	return;
         }
 
         // 필수입력 유도 (체크)
