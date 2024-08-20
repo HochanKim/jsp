@@ -7,6 +7,48 @@
 <title>Insert title here</title>
 </head>
 <body>
-회원정보 보여주는 곳
+	<%@include file="db.jsp"%>	
+	<%
+		ResultSet rs = null;
+		PreparedStatement pstmt = null;
+		
+		String userId = request.getParameter("userId");
+		String sql = "Select * from hmw_user Where userId = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userId);  // SQL 인젝션 방지
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()){
+		%> 
+		<section>
+			<h2>회원정보</h2>
+			<div>
+				<span>아이디</span><%= rs.getString("userId") %>
+			</div>
+			<div>
+				<span>이름</span><%= rs.getString("userName") %>
+			</div>
+			<div>
+				<span>닉네임</span><%= rs.getString("nickName") %>
+			</div>
+			<div>
+				<span>전화번호</span><%= rs.getString("p_number") %>
+			</div>
+		</section>
+		<% 
+			} else {
+				out.println("삭제된 아이디 입니다.");
+			}
+			
+		} catch(SQLException ex) {
+			out.println("SQLException : " + ex.getMessage());
+			
+		} finally {
+			if (rs != null) try { rs.close(); } catch (SQLException ignore) {}
+			if (pstmt != null) try { pstmt.close(); } catch (SQLException ignore) {}
+		}
+		%>
 </body>
 </html>

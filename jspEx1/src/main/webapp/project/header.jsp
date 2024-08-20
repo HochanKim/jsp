@@ -35,13 +35,13 @@
 						<%
 							} else {
 								// 세션값이 존재하는 경우
-								String userId = (String) session.getAttribute("userId");
-								String staff = (String) session.getAttribute("staffYN");
+								String userId = (String) session.getAttribute("userId"); 	// 세션으로 가져온 'userId'를 문자열 변수 'userId'에 저장 
+								String staff = (String) session.getAttribute("staffYN");	// 세션으로 가져온 'staffYN'을 문자열 변수 'staff'에 저장
 						%>
 								<a href="javascript::">
 									<span class="logout">로그아웃</span>
 								</a>
-								<a href="javascript::">
+								<a href="javascript::" onclick="fnInfo('<%= userId %>')">	<!-- 세션값을 담은 변수 userId를 파라미터로 전달 -->
 									<span class="memberinfo">회원정보</span>
 								</a>
 						<%
@@ -122,10 +122,9 @@
 	});
 	
 	// 회원정보
-	var userInfo = document.querySelector(".memberinfo");
-	$(userInfo).on("click", () => {
-		location.href="memberinfo.jsp";
-	});
+	function fnInfo(userId) {	
+		location.href="memberinfo.jsp?userId="+userId;	
+	}
 	</script>
 </body>
 </html>

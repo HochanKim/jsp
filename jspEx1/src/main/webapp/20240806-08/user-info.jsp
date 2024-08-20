@@ -13,7 +13,7 @@
 		ResultSet rs = null;
 		Statement stmt = null;
 		
-		String id = request.getParameter("userId");
+		String id = request.getParameter("userId");	/* list02.jsp에서 전달받음 */
 		String sql = "Select * from tbl_user Where userId = '"+ id +"'";
 		
 		try {

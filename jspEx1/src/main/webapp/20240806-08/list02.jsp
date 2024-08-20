@@ -88,11 +88,11 @@
 </html>
 
 <script>
-	function fnView(boardNo){
+	function fnView(boardNo){	/* board-view.jsp로 이동 */
 		location.href="board-view.jsp?boardNo="+boardNo;
 	}
 	
-	function fnInfo(userId){
+	function fnInfo(userId){	/* user-info.jsp로 이동 */
 		location.href="user-info.jsp?userId="+userId;
 	}
 	
