@@ -77,5 +77,5 @@
 
 ---
 
-### 링크
-링크 걸고 싶으면 (<, >) 이걸로 감싸세요.
+### 프로젝트 링크
+<https://github.com/HochanKim/jsp/tree/main/jspEx1/src/main/webapp/project>
