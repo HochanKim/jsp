@@ -1,6 +1,6 @@
 # Personal Project 
 
-[images/dot.png ](https://github.com/HochanKim/https---github.com-HochanKim-html-css/blob/html-css/images/dot.png)어떻게 했는가?
+![dot](https://github.com/user-attachments/assets/66295447-c48a-4e05-af0b-9963a9e4e292)어떻게 했는가?
 
 ---
 ### 제목 (# 이용하기, 새로운 줄에서 #을 입력하고 제목 작성하기. #의 개수에 따라 크기 달라짐)
