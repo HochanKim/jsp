@@ -19,5 +19,7 @@
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 
+<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white">
+
 ### 프로젝트 링크
 <https://github.com/HochanKim/jsp/tree/main/jspEx1/src/main/webapp/project>
