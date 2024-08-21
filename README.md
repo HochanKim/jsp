@@ -1,6 +1,6 @@
 # Personal Project 
 
-### <img src="https://github.com/user-attachments/assets/a5e2f4b7-b8ff-4a10-8dbf-16bf16e267fd" width="30" height="30" /> 어떻게 했는가?
+## <img src="https://github.com/user-attachments/assets/a5e2f4b7-b8ff-4a10-8dbf-16bf16e267fd" width="30" height="30" /> 어떻게 했는가?
 
 +  jsp를 주로 활용하여 태그를 마크업하고 로그인과 회원가입폼, 그리고 영상제작 회사의 사이트를 가상으로 설정하여 
 
@@ -8,10 +8,7 @@
 
    관리할수 있도록 하였습니다.
 
-# 1개
-## 2개
-### 3개
-###### 6개(max)
+## <img src="https://github.com/user-attachments/assets/a5e2f4b7-b8ff-4a10-8dbf-16bf16e267fd" width="30" height="30" /> 개발 기간
 
 ---
 
