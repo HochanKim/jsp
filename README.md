@@ -13,9 +13,11 @@
 +  2024.08.12 ~ 2024.08.20 (이후에도 추가적으로 작업할 예정)
 
 ## <img src="https://github.com/user-attachments/assets/a5e2f4b7-b8ff-4a10-8dbf-16bf16e267fd" width="30" height="30" /> 사용된 언어
-1. JSP
-2. JavaScript
-3. CSS
+<img alt="Static Badge" src="https://img.shields.io/badge/JSP-3178C6">
+
+https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white
+
+[3. CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 ### 프로젝트 링크
 <https://github.com/HochanKim/jsp/tree/main/jspEx1/src/main/webapp/project>
