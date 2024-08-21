@@ -1,4 +1,4 @@
-# sample
+# Personal Project 
 
 ### 줄바꿈
 줄바꿈은 엔터 2번(공백 1줄) 있어야
