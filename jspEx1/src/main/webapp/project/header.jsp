@@ -16,7 +16,7 @@
     <header id="header">
         <div class="wrap">
             <div class="logo-img">
-                <a href="javascript::">
+                <a href="index.jsp">
                     <img src="image/logo_colorchange.png" rel="로고">
                 </a>
             </div>

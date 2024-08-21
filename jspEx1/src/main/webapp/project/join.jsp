@@ -12,25 +12,25 @@
 <!-- 'header.jsp' or 'login.jsp'에서 이동 -->
 	<form name="user" class="new-join" method="post">	
 		<div>
-			<label>아이디</label>
+			<label>아이디<span>*</span></label>
             <input type="text" name="userId">
 			<button type="button" onclick="idCheck()">중복체크</button>	<!-- 클릭시 'idCheck.jsp'로 정보 전달 -->
 		</div>
 		<div>
-			<label>비밀번호</label>
+			<label>비밀번호<span>*</span></label>
             <input type="password" name="pwd" id="pwd">
 		</div>
 		<div>
-			<label>비밀번호 확인</label>
+			<label>비밀번호 확인<span>*</span></label>
             <input type="password" name="pwdCheck" id="pwdCheck">
 		</div>
         <div>
-			<label>닉네임</label>
+			<label>닉네임<span>*</span></label>
             <input type="text" name="nickName">
 			<button type="button" onclick="nickCheck()">중복체크</button>	<!-- 클릭시 'idCheck.jsp'로 정보 전달 -->
 		</div>
 		<div>
-			<label>이름</label>
+			<label>이름<span>*</span></label>
             <input type="text" name="userName">
 		</div>
 		<div>
@@ -60,11 +60,11 @@
             alert("아이디를 입력해주세요");
             form.userId.focus();
             return;
-        } else if(form.userId.value.length <= 5 || form.userId.value.length > 12){
-            alert("아이디는 최소 5글자 ~ 12글자 입니다");
-            return;
         } else if(!check2){
         	alert("아이디 중복체크 해주세요");
+            return;
+        } else if(form.userId.value.length <= 5 || form.userId.value.length > 12){
+            alert("아이디는 최소 5글자 ~ 12글자 입니다");
             return;
         } else if(!regId.test(form.userId.value)){
         	alert("아이디는 영문, 숫자로만 생성이 가능합니다");

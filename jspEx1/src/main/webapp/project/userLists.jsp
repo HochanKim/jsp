@@ -8,6 +8,6 @@
 </head>
 <body>
 추후에 작업
-<a href="index.jsp"></a>
+<a href="index.jsp">이동</a>
 </body>
 </html>

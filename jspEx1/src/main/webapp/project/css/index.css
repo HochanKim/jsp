@@ -58,6 +58,11 @@
     font-weight: bold;
 }
 
+.contact div span, .new-join div span {
+	font-weight:bold;
+	color:crimson;
+}
+
 /* 로그인 및 회원가입 폼 양식 */
 form.login {
     width:400px;

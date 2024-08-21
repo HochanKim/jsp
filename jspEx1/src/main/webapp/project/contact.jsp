@@ -18,19 +18,19 @@
                 <div>
                     <h2>Contacts</h2>
                     <label>
-                        <p>성함(법인명)</p> 
+                        <p>성함(법인명)<span>*</span></p> 
                         <input type="text" name="name" class="input-text">
                     </label>
                 </div>
                 <div>
                     <label>
-                        <p>연락처</p> 
+                        <p>연락처<span>*</span></p> 
                         <input type="text" name="phone" placeholder="010xxxxxxxx or 031-xxx-xxxx" class="input-text">
                     </label>
                 </div>
                 <div>
                     <label>
-                        <p>대표메일</p> 
+                        <p>대표메일<span>*</span></p> 
                         <input type="text" name="email" placeholder="abc@example.com" class="input-text">
                     </label>
                 </div>
@@ -41,7 +41,7 @@
                     </label>
                 </div>
                 <div>
-                    <p>제작방식</p>  
+                    <p>제작방식<span>*</span></p>  
                     <label><input class="radio" type="radio" name="classification" value="picture">사진촬영</label>
                     <label><input class="radio" type="radio" name="classification" value="allround">영상제작(종합)</label>
                     <label><input class="radio" type="radio" name="classification" value="shot">영상촬영</label>
@@ -50,7 +50,7 @@
                     <label><input class="radio" type="radio" name="classification" value="droneshot">드론촬영</label>
                 </div>
                 <div>
-                    <p>제작목적</p>
+                    <p>제작목적<span>*</span></p>
                     <label><input class="radio" type="radio" name="purpose" value="pr">제품/회사 홍보</label>
                     <label><input class="radio" type="radio" name="purpose" value="mv">뮤직비디오</label>
                     <label><input class="radio" type="radio" name="purpose" value="recode">행사기록</label>

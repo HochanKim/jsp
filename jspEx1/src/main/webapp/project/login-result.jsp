@@ -45,16 +45,9 @@
 					// 로그인 성공, 세션 저장
 					session.setAttribute("userId", rs.getString("userId"));
 					session.setAttribute("staffYN", rs.getString("staffYN"));
-					/* // 관리자, 사용자 구분
-					if (rs.getString("staffYN").equals("Y")){
-						// user-list.jsp 페이지 이동
-						response.sendRedirect("userLists.jsp");
-					} else {
-						// list02.jsp 페이지 이동
-						response.sendRedirect("index.jsp");
-					} */
 					// 세션 유지 기간 설정, 초 단위
 					session.setMaxInactiveInterval(60); 	// 1분간 아이디 유지
+					
 					// 로그인 실패 카운트 누적 초기화
 					sql = "UPDATE hmw_user SET count = '0' WHERE userId = '" + userId + "'";
 					stmt.executeUpdate(sql);

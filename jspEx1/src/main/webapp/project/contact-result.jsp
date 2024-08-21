@@ -20,7 +20,7 @@
 
 	Statement stmt = null;
 	
-	try{
+	try {
 		stmt = conn.createStatement();
 		String sql 
 		= "INSERT INTO HMW_CONTACT VALUES (null, '"+ name +"', '"+ phone +"', '"+ email +"', '"+ inquiry +"', '"+ classf +"', '"+ purp +"', NOW())"; 
