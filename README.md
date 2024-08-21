@@ -1,6 +1,6 @@
 # Personal Project 
 
-### <img src="[https://github.com/user-attachments/assets/ef407667-a26e-4c0f-88f3-d565db4dc2c4](https://github.com/user-attachments/assets/a5e2f4b7-b8ff-4a10-8dbf-16bf16e267fd)" width="50" height="50" /> 어떻게 했는가?
+### <img src="[https://github.com/user-attachments/assets/ef407667-a26e-4c0f-88f3-d565db4dc2c4](https://github.com/user-attachments/assets/a5e2f4b7-b8ff-4a10-8dbf-16bf16e267fd)" width="10%" height="10%" /> 어떻게 했는가?
 
 ---
 ### 제목 (# 이용하기, 새로운 줄에서 #을 입력하고 제목 작성하기. #의 개수에 따라 크기 달라짐)
